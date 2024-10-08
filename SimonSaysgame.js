@@ -15,6 +15,15 @@ document.addEventListener("keypress", function(){
     }
 });
 
+document.addEventListener("mousedown", function(event){
+    if (started == false && !event.target.classList.contains("btn")){
+        console.log("Game Started!");
+        started =true;
+
+        levelUp();
+    }
+});
+
 
 function gameFlash(btn){
     btn.classList.add("flash");
